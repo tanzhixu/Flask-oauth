@@ -1,0 +1,41 @@
+pip install flask-sqlalchemy
+pip install PassLib
+pip install Flask-MySQLdb
+pip install SQLAlchemy-migrate
+
+API:
+test:
+	methods: 		get
+	url: 			http://127.0.0.1:5000/test/1
+
+login:
+	methods: 		post
+	Content-Type: 	applications/json
+	args:
+					{'username':'test','password':'123456'}
+	url: 			http://127.0.0.1:5000/oauth/user/login
+
+logout:
+	url:			http://127.0.0.1:5000/oauth/user/logout
+
+user_add:
+	methods:		post
+	Content-Type: 	applications/json
+	args:
+					{'username':'test','password':'123456'}
+	url:			http://127.0.0.1:5000/oauth/user/add
+
+user_changepasswd:
+	methods:		post
+	Content-Type: 	applications/json
+	args:
+					{'password':'123456'}
+	url:			http://127.0.0.1:5000/oauth/user/changepasswd
+
+user_delete:
+	methods:		get
+	url:			http://127.0.0.1:5000/oauth/user/delete?userid=2
+
+user_list:
+	methods:		get
+	url:			http://127.0.0.1:5000/oauth/user/list				
